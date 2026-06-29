@@ -1,5 +1,3 @@
-// ignore_for_file: depend_on_referenced_packages
-
 import 'package:demo1/model/expense_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -13,14 +11,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // final List<ExpenseModel> expenses = [
-  //   ExpenseModel(title: "Groceries", amount: 45, date: DateTime.now()),
-  //   ExpenseModel(
-  //     title: "Dinner",
-  //     amount: 30,
-  //     date: DateTime.now().subtract(Duration(days: 1)),
-  //   ),
-  // ];
   final expenseBox = Hive.box<ExpenseModel>("expenses");
   List<ExpenseModel> get expenses => expenseBox.values.toList();
 
